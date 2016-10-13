@@ -1,0 +1,454 @@
+/******   FOLHA DE ESTILO - NOVA WS - COTUCA - PD   ******/
+/******          Feito por: Lucas Valente           ******/
+
+/* Estrutura */
+
+div {position: absolute;}
+
+
+/* Fonte */
+@font-face 
+{
+    font-family: "sansation";
+    src: url(content/font/Sansation_Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face 
+{
+    font-family: "sansation";
+    src: url(content/font/Sansation_Regular.ttf);
+}
+
+
+
+
+/* Formulário */
+
+textarea
+{
+    background-color: #145252; 
+    font-family: "sansation";
+    color: white;
+}
+
+input[type=text]:focus
+{
+    background-color: #1d6f6f; 
+}
+input, textarea
+{
+    -webkit-appearance: none;
+    background-color: #145252;
+    font-family: "sansation";
+    color: white;
+    border: 2px solid #0c3b3b;
+    margin: 10px;
+    padding: 10px;
+    outline: none;
+}
+
+input[type=checkbox], input[type=radio]
+{
+    margin:5px;
+    padding: 5px;
+    font-size: 20;
+    height: 20px;
+    width: 20px;
+    background-image: url(content/imgs/unchecked.png);
+    -webkit-background-size: 20px 20px;
+}
+
+input[type=checkbox]:checked, input[type=radio]:checked
+{
+    background-image: url(content/imgs/checked.png);
+}
+
+input[type=submit], input[type=reset] 
+{
+    background-color: #145252;
+    color: white;
+    font-family: "sansation";
+}
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar {width: 10px;}
+::-webkit-scrollbar-track
+{
+    background-color: #1d6f6f;
+}
+::-webkit-scrollbar-thumb
+{
+    background-color: #0c3b3b;
+}
+
+
+
+
+/* Título */
+
+.titleCl
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    background-color: #0c3b3b;
+    font-family: "sansation";
+    color: white;
+    font-size: 40;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.5s ease 0s;
+    overflow: hidden;
+}
+
+.titleCl:hover
+{
+    background-color: #145252;
+}
+
+.titleCl:active
+{
+    background-color: #1d6f6f;
+}
+
+.titleTextCl
+{
+    position: absolute;
+    line-height: 60px;
+    height: 60px; 
+    width: 100%;
+    text-align: center;
+    right: 0px;
+    text-decoration: none;
+}
+.titleTextCl:hover {text-decoration: none;}
+
+
+
+
+/* Sidebar */
+
+.sidebarCl 
+{
+    position: fixed;
+    top: 60px;
+    left: 0px;
+    bottom: 30px;
+    right: calc(100% - 220px);
+    height: calc(100% - 60px);
+    width: 220px;
+    background-color: #145252;
+    overflow: hidden;
+}
+
+.sidebarSubFrameCl
+{
+    position: relative;
+    
+    background-color: #145252;
+    font-family: "sansation";
+    color: white;
+    font-weight: bold;
+    font-size: 30;
+    text-align: left;
+    border: none;
+    overflow: hidden;
+    transition: all 0.5s ease 0s;
+    height: 60px;
+    width: 100%;
+    left: 0px;
+}
+
+.sidebarSubFrameCl:hover
+{
+    background-color: #3fadad;
+}
+
+.aSelector
+{
+    position: absolute;
+        
+    top: 0px;
+    left: 0px;
+    padding: 15px 15px 15px 15px;
+    height: calc(100% - 30px);
+    width: calc(100% - 30px);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border: hidden;
+}
+
+.aSelector:hover 
+{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+/* Rodapé */
+
+
+
+.bottomCl
+{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #0c3b3b;
+    font-family: sansation;
+    font-weight: bold;
+    font-size: 14;
+    text-align: right;
+    color: white;
+    overflow: hidden;
+}
+
+
+
+/* Corpo (margem mínima: 20px) */
+
+button
+{
+    margin: none;
+}
+
+.bodyFrame
+{
+    position: fixed;
+    top: 60px;
+    left: 220px;
+    right: 0px;
+    bottom: 30px;
+}
+
+.bodyCl
+{
+    margin: 0px;
+    padding: 20px 20px 20px 20px;
+    position: relative;
+    font-family: "sansation";
+    color: #072121;
+    background-color: #72b4b4;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-align: justify;
+    opacity: 1.0;
+    animation-name: bodyAnimation;
+    animation-duration: 0.75s;
+}
+
+@keyframes bodyAnimation 
+{
+    from {background-color: #145252;
+          top: 100%;
+          opacity: 0}
+    to {background-color: #72b4b4;
+        top: 0px;
+        opacity: 1.0;}
+}
+
+.divideY /* Requer atributo "left" e "height"+20px no local de chamada */
+         /* margem mínima: 20px */
+{
+    position: absolute;
+    width: 5px;
+    background-color: #145252;
+    top: -20px;
+    
+    animation-name: divideYAnimation;
+    animation-duration: 3s;
+    border: none;
+}
+
+@keyframes divideYAnimation
+{
+    0%   {transform:  translateY(-100%);
+          width: 2px;}
+    50%   {transform:  translateY(-100%);
+          width: 2px;}
+    90%  {transform:  translateY(auto);
+          width: 2px;}
+    95%  {transform:  translateY(auto);
+          width: 2px;}
+    100% {width: 5px;}
+}
+
+h1 {font-size: 36}
+
+h2 {font-size: 22}
+
+.divideX /* Requer atributo "top" no local de chamada */
+{
+    position: absolute;
+    height: 5px;
+    width: calc(100% + 40px + 10px); /* 10px --> scroll */
+    left: -20px;
+    bottom: 0px;
+    right: 0px;
+    background-color: #145252;
+
+        
+    animation-name: divideXAnimation;
+    animation-duration: 3.5s;
+    animation-timing-function: ease;
+    border: none;
+}
+
+@keyframes divideXAnimation
+{
+    0%   {transform: translateY(-400px) translateX(-5px);
+          width: 5px;
+          height: 40%;
+          opacity: 0;}
+    50%   {transform: translateY(-400px) translateX(-5px);
+          width: 5px;
+          height: 40%;
+          opacity: 0;}
+    60%  {transform: translateY(-400px) translateX(0px);
+          width: 5px;
+          height: 40%;
+          opacity: 100;}
+    65%  {transform: translateY(auto);
+          width: 5px;
+          height: 40%;}
+    70%  {width: 5px;
+          height: 40%;}
+    85%  {height: 5px;
+          width: 5px;}
+    100% {width: calc(100% + 40px + 10px);}
+}
+
+
+/* Hs -- Sempre em LETRAS MAIÚSCULAS*/
+
+h1 {font-size: 36}
+h2 {font-size: 30}
+h3 {font-size: 24}
+
+
+/* Tables */
+
+table 
+{
+    border-collapse: collapse;
+    border-top: 3px solid #0c3b3b;
+    width: 100%;
+}
+tr:nth-child(odd) {
+    background-color: #508d8d;
+}
+th {text-decoration: underline;}
+td.img, th.img 
+{   
+    max-height: 200px;
+    max-width: 200px;
+    border-style: none;
+}
+table.img 
+{
+    border-style: none;
+}
+th, td
+{
+    color: black;
+    border: none;
+    text-align: left;
+    padding-left: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 20;
+    overflow: hidden;
+}
+
+img
+{
+    margin: auto;
+    padding: inherit;
+}
+
+/* tag 'a' */
+
+a
+{
+    font-weight: bold;
+    text-decoration: none;
+    border: hidden;
+    color: inherit;
+}
+
+a:hover 
+{
+    text-decoration: underline;
+    color: #831111;
+}
+
+.aRef:hover  {text-decoration: none;}
+.aRef:target 
+{
+    color: #831111;
+    animation-name: aRefAnimation;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-timing-function: ease;
+}
+
+@keyframes aRefAnimation
+{
+    0%   {font-size: inherit;}
+    50% {font-size: 30}
+    100%   {font-size: inherit;}
+}
+
+
+
+
+/* EASTEREGG */
+
+.koalaBody
+{
+   animation-name: aKoalaBody;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes aKoalaBody
+{
+    0%  {background-color: red;}
+    25% {background-color: darkblue;}
+    50% {background-color: green;}
+    75% {background-color: yellow;}
+    100% {background-color: deeppink;}
+}
+
+.koala
+{
+    animation-name: aKoala;
+    animation-duration: 1.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes aKoala
+{
+    0%  {transform: rotate(0deg) translateY(0px) translateX(0px);}
+    25% {transform: rotate(90deg) translateX(200px) translateY(-200px);}
+    50% {transform: rotate(180deg) translateX(-200px) translateY(200px);}
+    75% {transform: rotate(270deg) translateX(200px) translateY(-200px);}
+    100% {transform: rotate(360deg) translateY(0px) translateX(0px);}
+}
